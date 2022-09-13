@@ -1,0 +1,22 @@
+.grid-index{
+	display: grid;
+	grid-template-areas:
+	"header"
+	"main"
+	"footer";
+	grid-template-rows:repeat(3, auto);
+	grid-template-columns:100%;
+}
+header{grid-area: header; display: flex;}
+main{grid-area: main;display:grid;grid-template-areas: "img-encabezado img-encabezado" "encabezado encabezado" "texto texto";grid-template-columns: 50% 50%; grid-template-rows: auto auto;}
+.img-index{grid-area: img-encabezado;}
+h1{grid-area: encabezado;}
+p{grid-area: texto;}
+footer{grid-area: footer;display: flex;justify-content: space-around;}
+ul{display: flex;}
+li{list-style-type: none;}
+a{text-decoration: none;}
+@media only screen and (max-width: 768px){
+	footer{flex-direction: column;}
+	main{grid-area: main;display:flex;flex-direction: column;}
+}
